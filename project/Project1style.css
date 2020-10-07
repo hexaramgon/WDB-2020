@@ -1,0 +1,111 @@
+.Newspaper {
+    display: flex;
+    flex-flow: column wrap ;
+    border-top : 3px solid black;
+    border-bottom : 3px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin: 10px;
+
+}
+
+#Titlepage {
+    font-family: "Snell Roundhand" ;
+    font-size: 60px;
+    font-weight: lighter;
+    margin-top: 58px;
+}
+
+.lowertitle {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.vertcol {
+    width: 35%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.maincol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.paragraph {
+    margin: 10px;
+}
+
+img {
+    width: 90%;
+    height: auto;
+    margin: 10px;
+
+}
+
+/* I need to learn how to make more classes more efficent because there's a lot of reduntant code */
+
+
+.tophalf {
+    display: flex;
+    border-bottom: 3px solid black;
+    justify-content: space-between;
+}
+/* this is the same display attribute as .tophalf */
+.bottomhalf {
+    display: flex;
+
+}
+
+.header {
+    text-align: center;
+}
+
+.goto {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.longbox {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#yellow {
+    background-color: navajowhite;
+}
+
+#blue {
+    background-color: paleturquoise;
+}
+
+#green {
+    background-color: aquamarine;
+}
+
+#darkblue {
+    background-color: cornflowerblue;
+}
+
+#purple {
+    background-color: mediumpurple;
+}
+
+h3{
+    color: dimgrey;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: dimgrey;
+}
