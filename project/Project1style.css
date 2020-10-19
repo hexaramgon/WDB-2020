@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .Newspaper {
     display: flex;
     flex-flow: column wrap ;
@@ -17,7 +21,7 @@
 }
 
 .lowertitle {
-    font-weight: normal;
+    font-weight: normal;=
     font-style: italic;
     font-size: 30px;
     text-align: center;
@@ -25,7 +29,7 @@
 }
 
 .vertcol {
-    width: 35%;
+    width: 25% ;
     border-right: 1px solid black;
     border-left: 1px solid black;
 }
@@ -34,7 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 50% ;
 }
 
 .paragraph {
@@ -69,12 +73,14 @@ img {
 .goto {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 75%
 }
 
 .longbox {
     display: flex;
     flex-direction: row;
+    height: 25%;
+    align-items: center;
 
 }
 
@@ -99,6 +105,7 @@ img {
 }
 
 h3{
+    font-family: Futura;
     color: dimgrey;
     font-size: 30px;
     font-weight: bold;
