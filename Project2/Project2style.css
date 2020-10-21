@@ -11,6 +11,8 @@
     width: 400px;
     height: 594px;
     margin: 0px;
+    border-radius: 100px;
+
 }
 
 .bottomscren{
@@ -131,11 +133,11 @@ h2 {
 }
 
 input:checked + .slider {
-    background-color: #be8c0f;
+    background-color: #72d98f;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #be8c0f;
+    box-shadow: 0 0 1px #72d98f;
 }
 
 input:checked + .slider:before {

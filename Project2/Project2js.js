@@ -1,29 +1,95 @@
 var calcoutput = 0;
 var counter = 1;
-let holder = 0;
+var buffer;
+var operationdo;
+var resulted = false;
 
 function buttonpressed(numb) {
-    calcoutput = calcoutput * 10 + numb;
+    if (resulted == true && operationdo == null) {
+        console.log("yes!")
+        Clear();
+        resulted = false;
+    }
+    if (calcoutput > 999999999999) {
+        return;
+    }
+    updateoutput(calcoutput * 10 + numb)
+}
+
+function updateoutput(num) {
+    if (num < 100000000)
+    num = Math.round(num * 100000000) / 100000000;
+    calcoutput = num;
     document.getElementById("inputarea").innerHTML = calcoutput;
 }
 
 function Clear() {
-    calcoutput = 0;
-    document.getElementById("inputarea").innerHTML = 0;
+    buffer = null;
+    operationdo = null;
+    updateoutput(0);
 }
 
 function backspace() {
-    calcoutput = (calcoutput - (calcoutput % 10))/ 10;
-    document.getElementById("inputarea").innerHTML = calcoutput;
+    updateoutput((calcoutput - (calcoutput % 10))/ 10)
 }
 
-function add() {
-    holder = calcoutput;
-
+function unconventional_mathcheck() {
+    if (buffer != null) {
+        buffer = operationdo(calcoutput, buffer);
+        updateoutput(0);
+        return true;
+    }
 }
-switch(action) {
-    case mult:
-        calcoutput
+
+function math(operation) {
+    switch (operation) {
+        case "plus":
+            if (unconventional_mathcheck()) {
+                operationdo = (a, b) => a + b;
+                break;
+            }
+            buffer = calcoutput;
+            updateoutput(0);
+            operationdo = (a, b) => a + b;
+            break;
+        case "mult":
+            if (unconventional_mathcheck()) {
+                operationdo = (a, b) => a * b;
+                break;
+            }
+            buffer = calcoutput;
+            updateoutput(0);
+            operationdo = (a, b) => a * b;
+            break;
+        case "minus":
+            if (unconventional_mathcheck()) {
+                operationdo = (a, b) => b - a;
+                break;
+            }
+            buffer = calcoutput;
+            updateoutput(0);
+            operationdo = (a, b) => b - a;
+            break;
+        case "divide":
+            if (unconventional_mathcheck()) {
+                operationdo = (a, b) => b / a;
+                break;
+            }
+            buffer = calcoutput;
+            updateoutput(0);
+            operationdo = (a, b) => b / a;
+            break;
+        case "equals":
+            if (operationdo === null) {
+                return;
+            }
+            console.log(operationdo);
+            let result = operationdo(calcoutput, buffer);
+            buffer = null;
+            updateoutput(result);
+            resulted = true;
+            break;
+    }
 }
 
 function wdbmode() {

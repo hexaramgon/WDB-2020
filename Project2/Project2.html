@@ -8,72 +8,76 @@
 
 <body>
 
+    <div class = "wholescreen" >
 
-    <div class = "calculator" id = "test">
+        <div class = "calculator" id = "test">
 
-        <div class = "topscren" >
-            <h3 id= "inputarea" > 0 </h3>
+            <div class = "topscren" >
+                <h3 id= "inputarea" > 0 </h3>
+            </div>
+
+            <div class = "bottomscren">
+
+                <div class = "row">
+                    <button class = "grey" id = "C" onclick="Clear()" > C
+                    </button>
+                    <button class = "grey" id = "backspace" onclick="backspace()">  ←
+                    </button>
+                    <button class= "orange" id = "divide" onclick="math('divide')"> ÷
+                    </button>
+                </div >
+
+                <div class= "row">
+                    <button class = "grey" id = "7" onclick="buttonpressed(7)"> 7
+                    </button>
+                    <button class = "grey" id = "8" onclick="buttonpressed(8)"> 8
+                    </button>
+                    <button class = "grey" id = "9" onclick="buttonpressed(9)"> 9
+                    </button>
+                    <button class= "orange" id = "mult" onclick="math('mult')"> ×
+                    </button>
+                </div>
+
+                <div class = "row">
+                    <button class = "grey" id = "4" onclick="buttonpressed(4)"> 4
+                    </button>
+                    <button class = "grey" id = "5" onclick="buttonpressed(5)"> 5
+                    </button>
+                    <button class = "grey" id = "6" onclick="buttonpressed(6)"> 6
+                    </button>
+                    <button class= "orange" id = "minus" onclick="math('minus')"> -
+                    </button>
+                </div>
+
+                <div class = "row">
+                    <button class = "grey" id = "1" onclick="buttonpressed(1)"> 1
+                    </button>
+                    <button class = "grey" id = "2" onclick="buttonpressed(2)" > 2
+                    </button>
+                    <button class = "grey" id = "3" onclick="buttonpressed(3)"> 3
+                    </button>
+                    <button class= "orange" id = "plus" onclick="math('plus')"> +
+                    </button>
+                </div>
+
+                <div class = "row">
+                    <button class = "grey" id = "zero" onclick="buttonpressed(0)"> 0
+                    </button>
+                    <button class= "orange" id = "equals" onclick="math('equals')"> =
+                    </button>
+                </div>
+
+            <!-- Rounded switch -->
+
+            </div>
+
         </div>
 
-        <div class = "bottomscren">
-
-            <div class = "row">
-                <button class = "grey" id = "C" onclick="Clear()" > C
-                </button>
-                <button class = "grey" id = "backspace" onclick="backspace()">  ←
-                </button>
-                <button class= "orange" id = "divide"> ÷
-                </button>
-            </div >
-
-            <div class= "row">
-                <button class = "grey" id = "7" onclick="buttonpressed(7)"> 7
-                </button>
-                <button class = "grey" id = "8" onclick="buttonpressed(8)"> 8
-                </button>
-                <button class = "grey" id = "9" onclick="buttonpressed(9)"> 9
-                </button>
-                <button class= "orange" id = "mult"> ×
-                </button>
-            </div>
-
-            <div class = "row">
-                <button class = "grey" id = "4" onclick="buttonpressed(4)"> 4
-                </button>
-                <button class = "grey" id = "5" onclick="buttonpressed(5)"> 5
-                </button>
-                <button class = "grey" id = "6" onclick="buttonpressed(6)"> 6
-                </button>
-                <button class= "orange" id = "minus"> -
-                </button>
-            </div>
-
-            <div class = "row">
-                <button class = "grey" id = "1" onclick="buttonpressed(1)"> 1
-                </button>
-                <button class = "grey" id = "2" onclick="buttonpressed(2)" > 2
-                </button>
-                <button class = "grey" id = "3" onclick="buttonpressed(3)"> 3
-                </button>
-                <button class= "orange" id = "plus"> +
-                </button>
-            </div>
-
-            <div class = "row">
-                <button class = "grey" id = "zero" onclick="buttonpressed(0)"> 0
-                </button>
-                <button class= "orange" id = "equals"> =
-                </button>
-            </div>
-
-        <!-- Rounded switch -->
-
-        </div>
 
     </div>
 
     <div class = "switcher">
-        <h2 id = "textbox"> WDB Mode </h2>
+        <h2 id = "textbox"> Cool Mode </h2>
         <label class="switch" >
             <input type="checkbox" onclick="wdbmode()">
             <span class="slider round"></span>

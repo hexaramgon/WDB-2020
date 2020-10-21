@@ -57,7 +57,7 @@ button {
 }
 
 h3 {
-    font-family: monospace;
+    font-family: "Courier New", monospace;
     color: white;
     font-size: 40px;
     font-weight: lighter;
@@ -86,10 +86,13 @@ h2 {
 }
 
 
+.wholescreen {
+    display: flex;
+}
 
 
 
-/** THIS IS ALL EXTRA I copied off internet, PLS IGNORE */
+/** PLS IGNORE/ Just a switch layout I found from the internet  */
 .switch {
     position: relative;
     display: inline-block;
